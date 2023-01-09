@@ -7,7 +7,8 @@
         <div class="mainText">
             <h1 class="display-4 text-capitalize text-black">
                 Our great selection of Pizzas!</h1>
-            <h4>Choose one, or try our Pizza Builder! Then Order and Done!</h4>
+            <h4>Choose one, or try our Pizza Builder! </h4>
+        <h4>Then Order and Done!</h4>
             <p class="smallText"><i>Only one pizza per order</i></p>
         </div>
         <div class="container">
@@ -15,7 +16,7 @@
                 <div class="col-12 mb-5 mt-5">
                     <div class="w-100 row makeYourOwnDiv">
                         <div class="col-4">
-                            <img src="~/images/pizza/create.png" class="w-100" />
+                        <img src="~/images/Pizzas/Create.png" class="w-100" />
                         </div>
                         <div class="col-8 align-items-center">
                             <div class="align-middle makeYourOwnText">
@@ -26,6 +27,21 @@
                         </div>
                     </div>
                 </div>
+
+                @foreach (var pizza in Model.PizzaDB)
+                {
+                    var imagePath = "~/images/Pizzas/" + (pizza.ImageTitle + ".png");
+
+                <div class="col-4 mb-5 mainImg">
+                            
+                            <img src="@imagePath" class="w-100" asp-append-version="true"/>
+                            <a class="btn btn-primary mt-1" asp-area="" asp-page="Checkout/Checkout"
+                            asp-route-ImageTitle="@pizza.ImageTitle"
+                            asp-route-PizzaPrice="@pizza.FinalPrice">Get this Pizza!</a>
+                            <br />
+                    </div>
+                }
+                
             </div>
         </div>
 </div>

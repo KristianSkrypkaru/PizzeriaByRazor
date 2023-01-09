@@ -13,11 +13,11 @@ namespace PizzeriaByRazor.Pages.Checkout
         {
             if (string.IsNullOrWhiteSpace(PizzaName))
             {
-                PizzaName = "custom";
+                PizzaName = "Custom";
             }
             if (string.IsNullOrWhiteSpace(ImageTitle))
             {
-                ImageTitle = "create";
+                ImageTitle = "Create";
             }
         }
     }
