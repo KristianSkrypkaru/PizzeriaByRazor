@@ -31,6 +31,7 @@ namespace PizzeriaByRazor.Pages.Checkout
 
             PizzaOrder pizzaOrder = new PizzaOrder();
             pizzaOrder.PizzaName = PizzaName;
+            pizzaOrder.PizzaName = ImageTitle;
             pizzaOrder.BasePrice = PizzaPrice;
 
             _context.PizzaOrders.Add(pizzaOrder);

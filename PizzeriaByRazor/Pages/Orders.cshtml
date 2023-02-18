@@ -24,15 +24,15 @@
         @foreach(var order in Model.PizzaOrders)
         {
             <tr>
-                <th>
+                <td>
                     @order.Id
-                </th>
-                <th>
+                </td>
+                <td>
                     @order.PizzaName
-                </th>
-                <th>
+                </td>
+                <td>
                     @order.BasePrice
-                </th>
+                </td>
             </tr>
         }
     </tbody>
